@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Avfour — Visual Creator</title>
+  <meta name="description" content="Avfour — Visual Creator. Documenting The Journey.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== KARTU UTAMA ===== -->
+  <main class="card">
+
+    <!-- Header: banner + foto profil -->
+    <header class="hero">
+      <img class="banner" data-img="banner" alt="" width="480" height="210">
+      <div class="hero-fade"></div>
+
+      <button class="chip chip-left" id="themeBtn" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+        <span id="themeLabel">DARK</span>
+      </button>
+      <button class="chip chip-right" id="langBtn" type="button"><span id="langLabel">EN</span></button>
+
+      <img class="avatar reveal" data-img="profile" alt="Foto profil Avfour" width="190" height="190">
+    </header>
+
+    <!-- Nama -->
+    <section class="intro reveal">
+      <h1>AVFOUR</h1>
+      <p class="role" data-i18n="role">VISUAL CREATOR</p>
+      <p class="tagline" data-i18n="tagline">Documenting The Journey</p>
+    </section>
+
+    <!-- Tombol utama -->
+    <nav class="menu" aria-label="Menu">
+      <button class="big reveal" type="button" data-popup="products">
+        <img data-img="products" alt="" loading="lazy">
+        <span class="big-label" data-i18n="products">Products</span>
+      </button>
+
+      <a class="pill reveal" data-link="projects" target="_blank" rel="noopener noreferrer">
+        <img class="thumb" data-img="projects" alt="" loading="lazy">
+        <span class="label" data-i18n="projects">Projects</span>
+      </a>
+
+      <a class="pill reveal" data-link="portofolio" target="_blank" rel="noopener noreferrer">
+        <img class="thumb" data-img="portofolio" alt="" loading="lazy">
+        <span class="label" data-i18n="portofolio">Portofolio</span>
+      </a>
+
+      <button class="pill reveal" type="button" data-popup="services">
+        <img class="thumb" data-img="services" alt="" loading="lazy">
+        <span class="label" data-i18n="services">Services</span>
+      </button>
+
+      <button class="pill reveal" type="button" data-popup="premium">
+        <img class="thumb" data-img="premiumApps" alt="" loading="lazy">
+        <span class="label" data-i18n="premium">Premium Apps</span>
+      </button>
+
+      <a class="pill reveal" data-link="testimonials" target="_blank" rel="noopener noreferrer">
+        <img class="thumb" data-img="testimonials" alt="" loading="lazy">
+        <span class="label" data-i18n="testimonials">Testimonials</span>
+      </a>
+    </nav>
+
+    <!-- Footer: sosmed + tanda tangan -->
+    <footer class="footer">
+      <div class="socials reveal">
+        <!-- TikTok: buka popover, bukan link langsung -->
+        <button class="icon-btn" id="tiktokBtn" type="button" aria-label="TikTok"
+                aria-haspopup="true" aria-expanded="false" aria-controls="tiktokPop">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.3 2.6 2 4.5 5 4.8"/></svg>
+        </button>
+
+        <a class="icon-btn" data-link="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6"/></svg>
+        </a>
+
+        <a class="icon-btn icon-wa" data-link="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.6-4.6A8.5 8.5 0 1 1 8 19.6L3 21z"/><path d="M8.6 8.6c0 3.4 3.4 6.8 6.8 6.8l1.2-1.6-2.2-1.1-1 .8c-1-.4-2.1-1.5-2.5-2.5l.8-1-1.1-2.2-2 .8z"/></svg>
+        </a>
+
+        <a class="icon-btn" data-link="pinterest" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10.6 20.4l1.8-7.4"/><path d="M9.2 12.6c-.8-2.8 1-5 3.3-5 2 0 3.3 1.4 3.3 3.2 0 2.2-1.2 3.8-2.8 3.8-1 0-1.6-.7-1.4-1.6"/></svg>
+        </a>
+
+        <a class="icon-btn" data-link="email" aria-label="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>
+        </a>
+      </div>
+
+      <div class="signature"><span></span><p>Avfour</p><span></span></div>
+    </footer>
+  </main>
+
+  <!-- ===== POPUP BESAR (Products / Services / Premium Apps) ===== -->
+  <div class="overlay" id="overlay" hidden>
+    <div class="backdrop"></div>
+    <div class="popup" id="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+      <div class="popup-inner" id="popupInner"></div>
+    </div>
+  </div>
+
+  <!-- ===== POPOVER KECIL TIKTOK ===== -->
+  <div class="popover" id="tiktokPop" role="group" aria-label="TikTok" hidden>
+    <a class="pop-btn" data-link="tiktokAvfour" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.3 2.6 2 4.5 5 4.8"/></svg>
+      <span>Avfour</span>
+    </a>
+    <a class="pop-btn" data-link="tiktok4Layers" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.3 2.6 2 4.5 5 4.8"/></svg>
+      <span>4Layers</span>
+    </a>
+  </div>
+
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+  <script src="script.js"></script>
+</body>
+</html>
